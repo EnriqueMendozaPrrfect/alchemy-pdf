@@ -1,0 +1,29 @@
+info:
+  name: convert
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:9670/v1/convert
+  body:
+    type: json
+    data: |-
+      {
+        "file": "<!DOCTYPE html><html><body><h1>My First Heading</h1><p>My first paragraph.</p></body></html>",
+        "format": "A4",
+        "landscape": false,
+        "margin": {
+          "top": "5px",
+          "right": "5px",
+          "bottom": "5px",
+          "left": "5px"
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
